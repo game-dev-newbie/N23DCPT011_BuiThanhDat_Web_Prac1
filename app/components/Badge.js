@@ -1,10 +1,20 @@
 export default function Badge({ label, color = "indigo" }) {
-  const styles =
-    color === "indigo"
-      ? "bg-indigo-100 text-indigo-700"
-      : "bg-gray-100 text-gray-600";
+  const colorMap = {
+    indigo: "bg-indigo-50 text-indigo-700 border-indigo-200/60",
+    purple: "bg-purple-50 text-purple-700 border-purple-200/60",
+    emerald: "bg-emerald-50 text-emerald-700 border-emerald-200/60",
+    amber: "bg-amber-50 text-amber-700 border-amber-200/60",
+    sky: "bg-sky-50 text-sky-700 border-sky-200/60",
+    rose: "bg-rose-50 text-rose-700 border-rose-200/60",
+    gray: "bg-slate-100 text-slate-700 border-slate-200",
+  };
+
+  const styleClass = colorMap[color] || colorMap.indigo;
+
   return (
-    <span className={`${styles} text-xs font-semibold px-2 py-1 rounded-full`}>
+    <span
+      className={`inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full border ${styleClass} transition-colors`}
+    >
       {label}
     </span>
   );
