@@ -6,6 +6,7 @@
 - **Mã sinh viên:** N23DCPT011
 - **Học phần:** Lập trình Web Fullstack (Web Fullstack Development)
 - **Kho lưu trữ:** `game-dev-newbie/N23DCPT011_BuiThanhDat_Web_Prac1`
+- **Domain lab:** *https://lab-nextjs-web-prac1.vercel.app/*
 
 ---
 
